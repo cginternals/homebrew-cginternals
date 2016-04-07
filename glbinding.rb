@@ -1,8 +1,8 @@
 class Glbinding < Formula
   desc "C++ binding for the OpenGL API"
   homepage "https://github.com/cginternals/glbinding"
-  url "https://github.com/cginternals/glbinding/archive/v2.0.0.tar.gz"
-  sha256 "105d8c2d6e345ccd2b49a1aaf3ce1d5fb2845d89c21c6ed3b655d42611b78662"
+  url "https://github.com/cginternals/glbinding/archive/v2.0.1.tar.gz"
+  sha256 "6712d91c5f8de81089549e499d8d63554f20abcd250cbfbfae34065760ddf6cb"
 
   bottle do
     sha256 "267be079b0657c4cc1cb4002bf4047d358630404e2ea0bcb966a5730b6a0641e" => :el_capitan
