@@ -1,6 +1,6 @@
 class Globjects < Formula
-  desc "C++ binding for the OpenGL API"
-  homepage "https://github.com/cginternals/glbinding"
+  desc "C++ library strictly wrapping OpenGL objects"
+  homepage "https://github.com/cginternals/globjects"
   url "https://github.com/cginternals/globjects/archive/v0.5.0.tar.gz"
   sha256 "172936e813609896573ba6e94ea4754555de14103a3aa416e36b839dd338cad6"
 
