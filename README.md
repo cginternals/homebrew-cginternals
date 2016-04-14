@@ -7,4 +7,4 @@ Current list of repositories:
  * libzeug 0.6.0
  * glbinding 2.0.1
  * globjects 0.5.0
- * gloperate
+ * gloperate 0.5.0
