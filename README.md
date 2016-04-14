@@ -4,7 +4,7 @@ This repository contains the Homebrew recipes for the open source repositories o
 
 Current list of repositories:
  * cpplocate 1.0
- * libzeug
+ * libzeug 0.6.0
  * glbinding 2.0.1
  * globjects
  * gloperate
