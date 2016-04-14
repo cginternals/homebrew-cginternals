@@ -6,5 +6,5 @@ Current list of repositories:
  * cpplocate 1.0
  * libzeug 0.6.0
  * glbinding 2.0.1
- * globjects
+ * globjects 0.5.0
  * gloperate
