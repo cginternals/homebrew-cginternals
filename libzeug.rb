@@ -6,6 +6,7 @@ class Libzeug < Formula
   head "https://github.com/cginternals/libzeug.git"
 
   depends_on "cmake" => :build
+  depends_on "qt5" => :recommended
 
   needs :cxx11
 
