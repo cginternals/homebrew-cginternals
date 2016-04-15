@@ -13,7 +13,7 @@ class Globjects < Formula
 
   def install
     args = []
-    
+
     args << "-Dglbinding_DIR=" + Formula["glbinding"].prefix
 
     if build.with? "glfw3" and build.with? "cpplocate"

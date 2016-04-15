@@ -16,7 +16,7 @@ class Gloperate < Formula
 
   def install
     args = []
-    
+
     args << "-Dcpplocate_DIR=" + Formula["cpplocate"].prefix
     args << "-Dlibzeug_DIR=" + Formula["libzeug"].prefix
     args << "-Dglbinding_DIR=" + Formula["glbinding"].prefix
