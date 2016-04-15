@@ -8,7 +8,7 @@ class Gloperate < Formula
   depends_on "cmake" => :build
   depends_on "cpplocate" => :required
   depends_on "libzeug" => :required
-  depends_on "glbinding" => :required
+  depends_on "cginternals/cginternals/glbinding" => :required
   depends_on "globjects" => :required
   depends_on "qt5" => :recommended
   depends_on "glfw3" => :optional
