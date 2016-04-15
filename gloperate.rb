@@ -6,10 +6,10 @@ class Gloperate < Formula
   head "https://github.com/cginternals/gloperate.git"
 
   depends_on "cmake" => :build
-  depends_on "cpplocate" => :required
-  depends_on "libzeug" => :required
+  depends_on "cginternals/cginternals/cpplocate" => :required
+  depends_on "cginternals/cginternals/libzeug" => :required
   depends_on "cginternals/cginternals/glbinding" => :required
-  depends_on "globjects" => :required
+  depends_on "cginternals/cginternals/globjects" => :required
   depends_on "qt5" => :recommended
   depends_on "glfw3" => :optional
   needs :cxx11

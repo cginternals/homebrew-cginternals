@@ -8,7 +8,7 @@ class Globjects < Formula
   depends_on "cmake" => :build
   depends_on "cginternals/cginternals/glbinding" => :required
   depends_on "glfw3" => :optional
-  depends_on "cpplocate" => :optional
+  depends_on "cginternals/cginternals/cpplocate" => :optional
   needs :cxx11
 
   def install
