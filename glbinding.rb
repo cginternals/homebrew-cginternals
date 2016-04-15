@@ -3,12 +3,7 @@ class Glbinding < Formula
   homepage "https://github.com/cginternals/glbinding"
   url "https://github.com/cginternals/glbinding/archive/v2.0.1.tar.gz"
   sha256 "6712d91c5f8de81089549e499d8d63554f20abcd250cbfbfae34065760ddf6cb"
-
-  bottle do
-    sha256 "267be079b0657c4cc1cb4002bf4047d358630404e2ea0bcb966a5730b6a0641e" => :el_capitan
-    sha256 "39355e37b3417a03a2b8ee7ce46fa27cdf72706a4ee4227fbe8cdfd9fa3a8e05" => :yosemite
-    sha256 "d4e319797d5b4dbf44dcd99f01de934941d7e39e82bcf66508853b386b2bdeab" => :mavericks
-  end
+  head "https://github.com/cginternals/glbinding.git"
 
   depends_on "cmake" => :build
   depends_on "glfw3" => :optional

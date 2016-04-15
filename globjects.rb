@@ -3,6 +3,7 @@ class Globjects < Formula
   homepage "https://github.com/cginternals/globjects"
   url "https://github.com/cginternals/globjects/archive/v0.5.0.tar.gz"
   sha256 "172936e813609896573ba6e94ea4754555de14103a3aa416e36b839dd338cad6"
+  head "https://github.com/cginternals/globjects.git"
 
   depends_on "cmake" => :build
   depends_on "glbinding" => :required

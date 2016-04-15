@@ -3,6 +3,7 @@ class Libzeug < Formula
   homepage "https://github.com/cginternals/libzeug"
   url "https://github.com/cginternals/libzeug/archive/v0.6.0.tar.gz"
   sha256 "af3ca78cf01423dfbba80405ea48f81b7b28c7b79be8dc44b7d6f432d837bc3e"
+  head "https://github.com/cginternals/libzeug.git"
 
   depends_on "cmake" => :build
 

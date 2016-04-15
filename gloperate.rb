@@ -3,6 +3,7 @@ class Gloperate < Formula
   homepage "https://github.com/cginternals/gloperate"
   url "https://github.com/cginternals/gloperate/archive/v0.5.0.tar.gz"
   sha256 "ec7495b2fd73f7ff3077dc4bb5c007ff51edc07d3d3372546721deeda87f650b"
+  head "https://github.com/cginternals/gloperate.git"
 
   depends_on "cmake" => :build
   depends_on "cpplocate" => :required
