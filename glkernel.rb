@@ -6,10 +6,10 @@ class Glkernel < Formula
   head "https://github.com/cginternals/glkernel.git"
 
   depends_on "cmake" => :build
-  depends_on "glm" => :required
+  depends_on "glm"
   depends_on "qt5" => :optional
-  depends_on "cginternals/cginternals/cppassist" => :optional
-  depends_on "cginternals/cginternals/cppexpose" => :optional
+  depends_on "cginternals/cginternals/cppassist" => :recommended
+  depends_on "cginternals/cginternals/cppexpose" => :recommended
 
   needs :cxx11
 
@@ -22,11 +22,16 @@ class Glkernel < Formula
       args << "-DOPTION_BUILD_EXAMPLES=ON"
     end
 
-    if build.with? "cginternals/cginternals/cppassist" && build.with? "cginternals/cginternals/cppexpose"
+    if build.with?("cppassist") && build.with?("cppexpose")
+      args << "-Dcppassist_DIR=" + Formula["cppassist"].installed_prefix
+      args << "-Dcppexpose_DIR=" + Formula["cppexpose"].installed_prefix
+
       args << "-DOPTION_BUILD_TOOLS=ON"
+    else
+      args << "-DOPTION_BUILD_TOOLS=OFF"
     end
 
-    system "cmake", ".", *std_cmake_args
+    system "cmake", ".", *args, *std_cmake_args
     system "cmake", "--build", ".", "--target", "install"
   end
 end

@@ -6,14 +6,19 @@ class Cppexpose < Formula
   head "https://github.com/cginternals/cppexpose.git"
 
   depends_on "cmake" => :build
-  depends_on "cginternals/cginternals/cpplocate" => :required
-  depends_on "cginternals/cginternals/cppassist" => :required
+  depends_on "cginternals/cginternals/cpplocate"
+  depends_on "cginternals/cginternals/cppassist"
 
   needs :cxx11
 
   def install
     ENV.cxx11
-    system "cmake", ".", *std_cmake_args
+
+    args = []
+    args << "-Dcppassist_DIR=" + Formula["cginternals/cginternals/cppassist"].installed_prefix
+    args << "-Dcpplocate_DIR=" + Formula["cginternals/cginternals/cpplocate"].installed_prefix
+
+    system "cmake", ".", *args, *std_cmake_args
     system "cmake", "--build", ".", "--target", "install"
   end
 end

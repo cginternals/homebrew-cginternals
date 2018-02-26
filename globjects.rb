@@ -6,8 +6,8 @@ class Globjects < Formula
   head "https://github.com/cginternals/globjects.git"
 
   depends_on "cmake" => :build
-  depends_on "glm" => :required
-  depends_on "cginternals/cginternals/glbinding" => :required
+  depends_on "glm"
+  depends_on "cginternals/cginternals/glbinding"
   depends_on "cginternals/cginternals/cpplocate" => :optional
   depends_on "glfw3" => :optional
   depends_on "qt5" => :optional
@@ -18,14 +18,14 @@ class Globjects < Formula
   def install
     args = []
 
-    args << "-Dglbinding_DIR=" + Formula["glbinding"].prefix
+    args << "-Dglbinding_DIR=" + Formula["glbinding"].installed_prefix
 
     if build.with? "glfw3" and build.with? "cpplocate"
       args << "-DOPTION_BUILD_EXAMPLES=ON"
     end
 
     if build.with? "cpplocate"
-      args << "-Dcpplocate_DIR=" + Formula["cpplocate"].prefix
+      args << "-Dcpplocate_DIR=" + Formula["cpplocate"].installed_prefix
     end
 
     if build.with? "doxygen"
