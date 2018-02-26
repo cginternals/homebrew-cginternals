@@ -2,7 +2,7 @@ class Globjects < Formula
   desc "C++ library strictly wrapping OpenGL objects"
   homepage "https://github.com/cginternals/globjects"
   url "https://github.com/cginternals/globjects/archive/master.tar.gz"
-  sha256 "68fa218c1478c09b555e44f2209a066b28be025312e0bab6e3a0b142a01ebbc6"
+  sha256 "1730449be436ccd55080c7427f1ee82dd4adb4e333d8d43a0851bf88e74ba99d"
   head "https://github.com/cginternals/globjects.git"
 
   depends_on "cmake" => :build
