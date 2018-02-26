@@ -18,14 +18,14 @@ class Globjects < Formula
   def install
     args = []
 
-    args << "-Dglbinding_DIR=" + Formula["glbinding"].installed_prefix
+    args << "-Dglbinding_DIR=" + Formula["cginternals/cginternals/glbinding"].installed_prefix
 
     if build.with? "glfw3" and build.with? "cpplocate"
       args << "-DOPTION_BUILD_EXAMPLES=ON"
     end
 
     if build.with? "cpplocate"
-      args << "-Dcpplocate_DIR=" + Formula["cpplocate"].installed_prefix
+      args << "-Dcpplocate_DIR=" + Formula["cginternals/cginternals/cpplocate"].installed_prefix
     end
 
     if build.with? "doxygen"

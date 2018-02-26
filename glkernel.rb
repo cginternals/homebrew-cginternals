@@ -21,8 +21,8 @@ class Glkernel < Formula
     end
 
     if build.with?("cppassist") && build.with?("cppexpose")
-      args << "-Dcppassist_DIR=" + Formula["cppassist"].installed_prefix
-      args << "-Dcppexpose_DIR=" + Formula["cppexpose"].installed_prefix
+      args << "-Dcppassist_DIR=" + Formula["cginternals/cginternals/cppassist"].installed_prefix
+      args << "-Dcppexpose_DIR=" + Formula["cginternals/cginternals/cppexpose"].installed_prefix
 
       args << "-DOPTION_BUILD_TOOLS=ON"
     else

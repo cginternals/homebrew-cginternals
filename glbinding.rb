@@ -28,7 +28,7 @@ class Glbinding < Formula
     end
 
     if build.with? "cpplocate"
-      args << "-Dcpplocate_DIR=" + Formula["cpplocate"].installed_prefix
+      args << "-Dcpplocate_DIR=" + Formula["cginternals/cginternals/cpplocate"].installed_prefix
     end
 
     ENV.cxx11
