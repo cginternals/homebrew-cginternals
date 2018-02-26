@@ -12,12 +12,11 @@ class Cppexpose < Formula
   needs :cxx11
 
   def install
-    ENV.cxx11
-
     args = []
     args << "-Dcppassist_DIR=" + Formula["cginternals/cginternals/cppassist"].installed_prefix
     args << "-Dcpplocate_DIR=" + Formula["cginternals/cginternals/cpplocate"].installed_prefix
 
+    ENV.cxx11
     system "cmake", ".", *args, *std_cmake_args
     system "cmake", "--build", ".", "--target", "install"
   end

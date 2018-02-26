@@ -14,8 +14,6 @@ class Glkernel < Formula
   needs :cxx11
 
   def install
-    ENV.cxx11
-
     args = []
 
     if build.with? "qt5"
@@ -31,6 +29,7 @@ class Glkernel < Formula
       args << "-DOPTION_BUILD_TOOLS=OFF"
     end
 
+    ENV.cxx11
     system "cmake", ".", *args, *std_cmake_args
     system "cmake", "--build", ".", "--target", "install"
   end
