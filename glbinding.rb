@@ -1,13 +1,15 @@
 class Glbinding < Formula
   desc "C++ binding for the OpenGL API"
   homepage "https://github.com/cginternals/glbinding"
-  url "https://github.com/cginternals/glbinding/archive/v2.0.1.tar.gz"
-  sha256 "6712d91c5f8de81089549e499d8d63554f20abcd250cbfbfae34065760ddf6cb"
+  url "https://github.com/cginternals/glbinding/archive/v2.1.4.tar.gz"
+  sha256 "cb5971b086c0d217b2304d31368803fd2b8c12ee0d41c280d40d7c23588f8be2"
   head "https://github.com/cginternals/glbinding.git"
 
   depends_on "cmake" => :build
-  depends_on "glfw3" => :optional
   depends_on "cginternals/cginternals/cpplocate" => :optional
+  depends_on "glfw3" => :optional
+  depends_on "doxygen" => :optional
+
   needs :cxx11
 
   def install
