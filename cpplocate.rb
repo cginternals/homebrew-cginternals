@@ -1,9 +1,10 @@
 class Cpplocate < Formula
   desc "C++ library that for applications to locate themselves, their data assets, as well as dependend modules."
-  homepage "https://github.com/cginternals/cpplocate"
-  sha256 ""
-
-  head "https://github.com/cginternals/cpplocate.git"
+  homepage "https://cpplocate.org/"
+  url "https://github.com/cginternals/cpplocate/archive/v2.1.0.tar.gz"
+  version "2.1.0"
+  
+  sha256 "da70ff59e490dd05434db093b06bb0775582d859da691cd3d1a917abb24b5fc8"
 
   depends_on "cmake" => :build
 
@@ -18,7 +19,7 @@ class Cpplocate < Formula
       #include <cpplocate/cpplocate.h>
       int main(void)
       {
-        const cpplocate::ModuleInfo moduleInfo = cpplocate::findModule("cpplocate");
+        const std::string executablePath = cpplocate::getExecutablePath();
       }
       EOS
     system ENV.cxx, "-o", "test", "test.cpp", "-std=c++11", "-stdlib=libc++",
